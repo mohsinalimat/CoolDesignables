@@ -26,7 +26,7 @@ class UIViewCorner : UIView, IBInspectableCorner {
 }
 
 /**
- * UIViewCorner: An UIImageView with IBInspectable Corner
+ * UIImageViewCorner: An UIImageView with IBInspectable Corner
  * @discussion: For more information about the properties, check the IBInspectableCorner protocol
  */
 @available(iOS 9.0, *)
@@ -43,7 +43,7 @@ class UIImageViewCorner : UIImageView, IBInspectableCorner {
 }
 
 /**
- * UIViewCorner: An UIButton with IBInspectable Corner
+ * UIButtonCorner: An UIButton with IBInspectable Corner
  * @discussion: For more information about the properties, check the IBInspectableCorner protocol
  */
 @available(iOS 9.0, *)

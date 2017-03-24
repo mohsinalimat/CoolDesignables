@@ -46,7 +46,7 @@ class UIViewShadow: UIView, IBInspectableShadow {
 }
 
 /**
- * UIViewShadow: An UIImageView with IBInspectable Drop Shadow
+ * UIImageViewShadow: An UIImageView with IBInspectable Drop Shadow
  * @discussion: For more information about the properties, check the IBInspectableShadow protocol
  */
 @available(iOS 9.0, *)
@@ -83,7 +83,7 @@ class UIImageViewShadow: UIImageView, IBInspectableShadow {
 }
 
 /**
- * UIViewShadow: An UIButton with IBInspectable Drop Shadow
+ * UIButtonShadow: An UIButton with IBInspectable Drop Shadow
  * @discussion: For more information about the properties, check the IBInspectableShadow protocol
  */
 @available(iOS 9.0, *)
