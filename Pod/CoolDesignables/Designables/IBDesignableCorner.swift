@@ -14,10 +14,10 @@ import UIKit
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIViewCorner : UIView, IBInspectableCorner {
+open class UIViewCorner : UIView, IBInspectableCorner {
     
     @IBInspectable
-    var cornerRadius: CGFloat = 0 {
+    open var cornerRadius: CGFloat = 0 {
         didSet {
             self.layer.cornerRadius = cornerRadius
             self.layer.masksToBounds = cornerRadius > 0
@@ -31,10 +31,10 @@ class UIViewCorner : UIView, IBInspectableCorner {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIImageViewCorner : UIImageView, IBInspectableCorner {
+open class UIImageViewCorner : UIImageView, IBInspectableCorner {
     
     @IBInspectable
-    var cornerRadius: CGFloat = 0 {
+    open var cornerRadius: CGFloat = 0 {
         didSet {
             self.layer.cornerRadius = cornerRadius
             self.layer.masksToBounds = cornerRadius > 0
@@ -48,10 +48,10 @@ class UIImageViewCorner : UIImageView, IBInspectableCorner {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIButtonCorner : UIButton, IBInspectableCorner {
+open class UIButtonCorner : UIButton, IBInspectableCorner {
     
     @IBInspectable
-    var cornerRadius: CGFloat = 0 {
+    open var cornerRadius: CGFloat = 0 {
         didSet {
             self.layer.cornerRadius = cornerRadius
             self.layer.masksToBounds = cornerRadius > 0

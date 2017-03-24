@@ -19,17 +19,17 @@ import Foundation
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIViewBorder : UIView, IBInspectableBorder {
+open class UIViewBorder : UIView, IBInspectableBorder {
     
     @IBInspectable
-    var borderWidth: CGFloat = 0 {
+    open var borderWidth: CGFloat = 0 {
         didSet {
             self.layer.borderWidth = borderWidth
         }
     }
     
     @IBInspectable
-    var borderColor: UIColor = .black {
+    open var borderColor: UIColor = .black {
         didSet {
             self.layer.borderColor = borderColor.cgColor
         }
@@ -42,17 +42,17 @@ class UIViewBorder : UIView, IBInspectableBorder {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIImageViewBorder : UIImageView, IBInspectableBorder {
+open class UIImageViewBorder : UIImageView, IBInspectableBorder {
     
     @IBInspectable
-    var borderWidth: CGFloat = 0 {
+    open var borderWidth: CGFloat = 0 {
         didSet {
             self.layer.borderWidth = borderWidth
         }
     }
     
     @IBInspectable
-    var borderColor: UIColor = .black {
+    open var borderColor: UIColor = .black {
         didSet {
             self.layer.borderColor = borderColor.cgColor
         }
@@ -65,17 +65,17 @@ class UIImageViewBorder : UIImageView, IBInspectableBorder {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIButtonBorder : UIButton, IBInspectableBorder {
+open class UIButtonBorder : UIButton, IBInspectableBorder {
     
     @IBInspectable
-    var borderWidth: CGFloat = 0 {
+    open var borderWidth: CGFloat = 0 {
         didSet {
             self.layer.borderWidth = borderWidth
         }
     }
     
     @IBInspectable
-    var borderColor: UIColor = .black {
+    open var borderColor: UIColor = .black {
         didSet {
             self.layer.borderColor = borderColor.cgColor
         }
@@ -92,30 +92,30 @@ class UIButtonBorder : UIButton, IBInspectableBorder {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIViewBorderHorizontal : UIView, IBInspectableBorderHorizontal {
+open class UIViewBorderHorizontal : UIView, IBInspectableBorderHorizontal {
     
     @IBInspectable
-    var borderTop: CGFloat = 1.0 {
+    open var borderTop: CGFloat = 1.0 {
         didSet {
             self.drawTopBorder()
         }
     }
     
     @IBInspectable
-    var borderBottom: CGFloat = 1.0 {
+    open var borderBottom: CGFloat = 1.0 {
         didSet {
             self.drawBottomBorder()
         }
     }
     
     @IBInspectable
-    var borderColor: UIColor = .black {
+    open var borderColor: UIColor = .black {
         didSet {
             self.layer.borderColor = borderColor.cgColor
         }
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         self.drawTopBorder()
         self.drawBottomBorder()
@@ -126,12 +126,12 @@ class UIViewBorderHorizontal : UIView, IBInspectableBorderHorizontal {
     /**
      * Previous Top Border
      */
-    fileprivate var currentBorderTop : CALayer?
+    fileprivate(set) open var currentBorderTop : CALayer?
     
     /**
      * Previous Bottom Border
      */
-    fileprivate var currentBorderBottom : CALayer?
+    fileprivate(set) open var currentBorderBottom : CALayer?
     
     
     /**
@@ -169,30 +169,30 @@ class UIViewBorderHorizontal : UIView, IBInspectableBorderHorizontal {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIImageViewBorderHorizontal : UIImageView, IBInspectableBorderHorizontal {
+open class UIImageViewBorderHorizontal : UIImageView, IBInspectableBorderHorizontal {
     
     @IBInspectable
-    var borderTop: CGFloat = 1.0 {
+    open var borderTop: CGFloat = 1.0 {
         didSet {
             self.drawTopBorder()
         }
     }
     
     @IBInspectable
-    var borderBottom: CGFloat = 1.0 {
+    open var borderBottom: CGFloat = 1.0 {
         didSet {
             self.drawBottomBorder()
         }
     }
     
     @IBInspectable
-    var borderColor: UIColor = .black {
+    open var borderColor: UIColor = .black {
         didSet {
             self.layer.borderColor = borderColor.cgColor
         }
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         self.drawTopBorder()
         self.drawBottomBorder()
@@ -203,12 +203,12 @@ class UIImageViewBorderHorizontal : UIImageView, IBInspectableBorderHorizontal {
     /**
      * Previous Top Border
      */
-    fileprivate var currentBorderTop : CALayer?
+    fileprivate(set) open var currentBorderTop : CALayer?
     
     /**
      * Previous Bottom Border
      */
-    fileprivate var currentBorderBottom : CALayer?
+    fileprivate(set) open var currentBorderBottom : CALayer?
     
     
     /**
@@ -246,24 +246,24 @@ class UIImageViewBorderHorizontal : UIImageView, IBInspectableBorderHorizontal {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIButtonBorderHorizontal : UIButton, IBInspectableBorderHorizontal {
+open class UIButtonBorderHorizontal : UIButton, IBInspectableBorderHorizontal {
     
     @IBInspectable
-    var borderTop: CGFloat = 1.0 {
+    open var borderTop: CGFloat = 1.0 {
         didSet {
             self.drawTopBorder()
         }
     }
     
     @IBInspectable
-    var borderBottom: CGFloat = 1.0 {
+    open var borderBottom: CGFloat = 1.0 {
         didSet {
             self.drawBottomBorder()
         }
     }
     
     @IBInspectable
-    var borderColor: UIColor = .black {
+    open var borderColor: UIColor = .black {
         didSet {
             self.layer.borderColor = borderColor.cgColor
         }
@@ -280,12 +280,12 @@ class UIButtonBorderHorizontal : UIButton, IBInspectableBorderHorizontal {
     /**
      * Previous Top Border
      */
-    fileprivate var currentBorderTop : CALayer?
+    fileprivate(set) open var currentBorderTop : CALayer?
     
     /**
      * Previous Bottom Border
      */
-    fileprivate var currentBorderBottom : CALayer?
+    fileprivate(set) open var currentBorderBottom : CALayer?
     
     
     /**
@@ -327,30 +327,30 @@ class UIButtonBorderHorizontal : UIButton, IBInspectableBorderHorizontal {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIViewBorderVertical : UIView, IBInspectableBorderVertical {
+open class UIViewBorderVertical : UIView, IBInspectableBorderVertical {
     
     @IBInspectable
-    var borderColor: UIColor = .black {
+    open var borderColor: UIColor = .black {
         didSet {
             self.layer.borderColor = borderColor.cgColor
         }
     }
     
     @IBInspectable
-    var borderLeft: CGFloat = 1.0 {
+    open var borderLeft: CGFloat = 1.0 {
         didSet {
             self.drawLeftBorder()
         }
     }
     
     @IBInspectable
-    var borderRight: CGFloat = 1.0 {
+    open var borderRight: CGFloat = 1.0 {
         didSet {
             self.drawRightBorder()
         }
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         self.drawLeftBorder()
         self.drawRightBorder()
@@ -361,12 +361,12 @@ class UIViewBorderVertical : UIView, IBInspectableBorderVertical {
     /**
      * Previous Left Border
      */
-    fileprivate var currentBorderLeft : CALayer?
+    fileprivate(set) open var currentBorderLeft : CALayer?
     
     /**
      * Previous Right Border
      */
-    fileprivate var currentBorderRight : CALayer?
+    fileprivate(set) open var currentBorderRight : CALayer?
     
     /**
      * Draws the Left Border
@@ -403,30 +403,30 @@ class UIViewBorderVertical : UIView, IBInspectableBorderVertical {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIImageViewBorderVertical : UIImageView, IBInspectableBorderVertical {
+open class UIImageViewBorderVertical : UIImageView, IBInspectableBorderVertical {
     
     @IBInspectable
-    var borderColor: UIColor = .black {
+    open var borderColor: UIColor = .black {
         didSet {
             self.layer.borderColor = borderColor.cgColor
         }
     }
     
     @IBInspectable
-    var borderLeft: CGFloat = 1.0 {
+    open var borderLeft: CGFloat = 1.0 {
         didSet {
             self.drawLeftBorder()
         }
     }
     
     @IBInspectable
-    var borderRight: CGFloat = 1.0 {
+    open var borderRight: CGFloat = 1.0 {
         didSet {
             self.drawRightBorder()
         }
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         self.drawLeftBorder()
         self.drawRightBorder()
@@ -437,12 +437,12 @@ class UIImageViewBorderVertical : UIImageView, IBInspectableBorderVertical {
     /**
      * Previous Left Border
      */
-    fileprivate var currentBorderLeft : CALayer?
+    fileprivate(set) open var currentBorderLeft : CALayer?
     
     /**
      * Previous Right Border
      */
-    fileprivate var currentBorderRight : CALayer?
+    fileprivate(set) open var currentBorderRight : CALayer?
     
     /**
      * Draws the Left Border
@@ -479,30 +479,30 @@ class UIImageViewBorderVertical : UIImageView, IBInspectableBorderVertical {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIButtonBorderVertical : UIButton, IBInspectableBorderVertical {
+open class UIButtonBorderVertical : UIButton, IBInspectableBorderVertical {
     
     @IBInspectable
-    var borderColor: UIColor = .black {
+    open var borderColor: UIColor = .black {
         didSet {
             self.layer.borderColor = borderColor.cgColor
         }
     }
     
     @IBInspectable
-    var borderLeft: CGFloat = 1.0 {
+    open var borderLeft: CGFloat = 1.0 {
         didSet {
             self.drawLeftBorder()
         }
     }
     
     @IBInspectable
-    var borderRight: CGFloat = 1.0 {
+    open var borderRight: CGFloat = 1.0 {
         didSet {
             self.drawRightBorder()
         }
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         self.drawLeftBorder()
         self.drawRightBorder()
@@ -513,12 +513,12 @@ class UIButtonBorderVertical : UIButton, IBInspectableBorderVertical {
     /**
      * Previous Left Border
      */
-    fileprivate var currentBorderLeft : CALayer?
+    fileprivate(set) open var currentBorderLeft : CALayer?
     
     /**
      * Previous Right Border
      */
-    fileprivate var currentBorderRight : CALayer?
+    fileprivate(set) open var currentBorderRight : CALayer?
     
     /**
      * Draws the Left Border

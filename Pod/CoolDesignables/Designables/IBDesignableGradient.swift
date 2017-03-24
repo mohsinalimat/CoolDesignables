@@ -15,30 +15,30 @@ import UIKit
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIViewGradientBackground : UIView, IBInspectableGradient {
+open class UIViewGradientBackground : UIView, IBInspectableGradient {
     
     @IBInspectable
-    var firstColor: UIColor = .black {
+    open var firstColor: UIColor = .black {
         didSet {
             self.applyGradient()
         }
     }
     
     @IBInspectable
-    var secondColor : UIColor = .white {
+    open var secondColor : UIColor = .white {
         didSet {
             self.applyGradient()
         }
     }
     
     @IBInspectable
-    var isHorizontal : Bool = false {
+    open var isHorizontal : Bool = false {
         didSet {
             self.applyGradient()
         }
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         self.applyGradient()
     }
@@ -48,7 +48,7 @@ class UIViewGradientBackground : UIView, IBInspectableGradient {
     /**
      * Previous Gradient View
      */
-    var gradientView : UIView?
+    fileprivate(set) open var gradientView : UIView?
     
     /**
      * Apply the Gradient background view as subview

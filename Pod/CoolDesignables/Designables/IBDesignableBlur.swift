@@ -15,15 +15,15 @@ import UIKit
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIViewBlurBackgroundDark : UIViewBlurBackground {
+open class UIViewBlurBackgroundDark : UIViewBlurBackground {
     
-    override var blurOpacity: CGFloat {
+    override open var blurOpacity: CGFloat {
         didSet {
             self.addBlurViewWith(style: .dark)
         }
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         self.addBlurViewWith(style: .dark)
         super.layoutSubviews()
     }
@@ -36,15 +36,15 @@ class UIViewBlurBackgroundDark : UIViewBlurBackground {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIViewBlurBackgroundLight : UIViewBlurBackground {
+open class UIViewBlurBackgroundLight : UIViewBlurBackground {
     
-    override var blurOpacity: CGFloat {
+    override open var blurOpacity: CGFloat {
         didSet {
             self.addBlurViewWith(style: .light)
         }
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         self.addBlurViewWith(style: .light)
         super.layoutSubviews()
     }
@@ -57,15 +57,15 @@ class UIViewBlurBackgroundLight : UIViewBlurBackground {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-class UIViewBlurBackgroundExtraLight : UIViewBlurBackground {
+open class UIViewBlurBackgroundExtraLight : UIViewBlurBackground {
     
-    override var blurOpacity: CGFloat {
+    override open var blurOpacity: CGFloat {
         didSet {
             self.addBlurViewWith(style: .extraLight)
         }
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         self.addBlurViewWith(style: .extraLight)
         super.layoutSubviews()
     }
@@ -77,10 +77,10 @@ class UIViewBlurBackgroundExtraLight : UIViewBlurBackground {
  * @discussion: For more information about the properties, check the UIViewBlurBackground protocol
  */
 @available(iOS 9.0, *)
-class UIViewBlurBackground : UIView, IBInspectableBlur {
+open class UIViewBlurBackground : UIView, IBInspectableBlur {
     
     @IBInspectable
-    var blurOpacity : CGFloat = 1.0
+    open var blurOpacity : CGFloat = 1.0
     
     /**
      * Previous Blur View
