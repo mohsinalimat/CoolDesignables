@@ -12,7 +12,7 @@ import UIKit
 /**
  * Adds to your IBDesignable a Blur Background (subview)
  */
-protocol IBInspectableBlur {
+public protocol IBInspectableBlur {
     
     /**
      * Blur subview opacity

@@ -11,7 +11,7 @@ import UIKit
 /**
  * Adds to your IBDesignable the Corner IBInspectable
  */
-protocol IBInspectableCorner : class {
+public protocol IBInspectableCorner : class {
     
     /**
      * Shortcut to the CALayer cornerRadius

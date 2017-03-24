@@ -12,7 +12,7 @@ import UIKit
 /**
  * Adds to your IBDesignable a Gradient Background (subview)
  */
-protocol IBInspectableGradient : class {
+public protocol IBInspectableGradient : class {
     
     /**
      * First UI Color

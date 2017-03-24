@@ -12,7 +12,7 @@ import UIKit
 /**
  * Adds to your IBDesignable the Border Width IBInspectable
  */
-protocol IBInspectableBorder : class {
+public protocol IBInspectableBorder : class {
     
     /**
      * Shortcut to the CALayer borderColor
@@ -29,7 +29,7 @@ protocol IBInspectableBorder : class {
 /**
  * Adds to your IBDesignable just Horizontal Borders CALayers
  */
-protocol IBInspectableBorderHorizontal : class {
+public protocol IBInspectableBorderHorizontal : class {
     
     /**
      * Shortcut to the CALayer borderColor
@@ -51,7 +51,7 @@ protocol IBInspectableBorderHorizontal : class {
 /**
  * Adds to your IBDesignable just Vertical Borders CALayers
  */
-protocol IBInspectableBorderVertical : class {
+public protocol IBInspectableBorderVertical : class {
     
     /**
      * Shortcut to the CALayer borderColor

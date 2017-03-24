@@ -11,7 +11,7 @@ import UIKit
 /**
  * Adds to your IBDesignable the Drop Shadow IBInspectable
  */
-protocol IBInspectableShadow : class {
+public protocol IBInspectableShadow : class {
     
     /**
      * Shortcut to the CALayer shadowColor
