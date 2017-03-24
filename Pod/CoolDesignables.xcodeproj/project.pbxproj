@@ -15,10 +15,22 @@
 		4A7F0E111E85B2BA00C35132 /* IBDesignableBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F0E101E85B2BA00C35132 /* IBDesignableBlur.swift */; };
 		4A7F0E131E85B69200C35132 /* IBInspectableGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F0E121E85B69200C35132 /* IBInspectableGradient.swift */; };
 		4A7F0E151E85B69700C35132 /* IBDesignableGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F0E141E85B69700C35132 /* IBDesignableGradient.swift */; };
+		4A7F0E1F1E85BB6500C35132 /* CoolDesignables.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACA64D21E85381D00A977C0 /* CoolDesignables.framework */; };
+		4A7F0E261E85BB9E00C35132 /* IBDesignableBlurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F0E251E85BB9E00C35132 /* IBDesignableBlurTests.swift */; };
 		4ACA64D71E85381D00A977C0 /* CoolDesignables.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ACA64D51E85381D00A977C0 /* CoolDesignables.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4ACA64E51E853AE000A977C0 /* IBInspectableShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA64E41E853AE000A977C0 /* IBInspectableShadow.swift */; };
 		4ACA64EF1E853F2400A977C0 /* IBDesignableShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA64EE1E853F2400A977C0 /* IBDesignableShadow.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A7F0E201E85BB6500C35132 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4ACA64C91E85381C00A977C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4ACA64D11E85381C00A977C0;
+			remoteInfo = CoolDesignables;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4A7F0E021E85A8DC00C35132 /* IBDesignableCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableCorner.swift; sourceTree = "<group>"; };
@@ -29,6 +41,9 @@
 		4A7F0E101E85B2BA00C35132 /* IBDesignableBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableBlur.swift; sourceTree = "<group>"; };
 		4A7F0E121E85B69200C35132 /* IBInspectableGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspectableGradient.swift; sourceTree = "<group>"; };
 		4A7F0E141E85B69700C35132 /* IBDesignableGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableGradient.swift; sourceTree = "<group>"; };
+		4A7F0E1A1E85BB6400C35132 /* CoolDesignablesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolDesignablesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A7F0E1E1E85BB6400C35132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A7F0E251E85BB9E00C35132 /* IBDesignableBlurTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableBlurTests.swift; sourceTree = "<group>"; };
 		4ACA64D21E85381D00A977C0 /* CoolDesignables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoolDesignables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ACA64D51E85381D00A977C0 /* CoolDesignables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoolDesignables.h; sourceTree = "<group>"; };
 		4ACA64D61E85381D00A977C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +52,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4A7F0E171E85BB6400C35132 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A7F0E1F1E85BB6500C35132 /* CoolDesignables.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4ACA64CE1E85381C00A977C0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,10 +70,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A7F0E1B1E85BB6400C35132 /* CoolDesignablesTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A7F0E251E85BB9E00C35132 /* IBDesignableBlurTests.swift */,
+				4A7F0E1E1E85BB6400C35132 /* Info.plist */,
+			);
+			path = CoolDesignablesTests;
+			sourceTree = "<group>";
+		};
 		4ACA64C81E85381C00A977C0 = {
 			isa = PBXGroup;
 			children = (
 				4ACA64D41E85381D00A977C0 /* CoolDesignables */,
+				4A7F0E1B1E85BB6400C35132 /* CoolDesignablesTests */,
 				4ACA64D31E85381D00A977C0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				4ACA64D21E85381D00A977C0 /* CoolDesignables.framework */,
+				4A7F0E1A1E85BB6400C35132 /* CoolDesignablesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,10 +111,10 @@
 		4ACA64E21E853AE000A977C0 /* Designables */ = {
 			isa = PBXGroup;
 			children = (
-				4A7F0E141E85B69700C35132 /* IBDesignableGradient.swift */,
 				4A7F0E101E85B2BA00C35132 /* IBDesignableBlur.swift */,
 				4A7F0E0C1E85AAA300C35132 /* IBDesignableBorder.swift */,
 				4A7F0E021E85A8DC00C35132 /* IBDesignableCorner.swift */,
+				4A7F0E141E85B69700C35132 /* IBDesignableGradient.swift */,
 				4ACA64EE1E853F2400A977C0 /* IBDesignableShadow.swift */,
 			);
 			path = Designables;
@@ -89,10 +123,10 @@
 		4ACA64E31E853AE000A977C0 /* Inspectables */ = {
 			isa = PBXGroup;
 			children = (
-				4A7F0E121E85B69200C35132 /* IBInspectableGradient.swift */,
 				4A7F0E0E1E85B2B600C35132 /* IBInspectableBlur.swift */,
 				4A7F0E0A1E85AA9D00C35132 /* IBInspectableBorder.swift */,
 				4A7F0E041E85A8DF00C35132 /* IBInspectableCorner.swift */,
+				4A7F0E121E85B69200C35132 /* IBInspectableGradient.swift */,
 				4ACA64E41E853AE000A977C0 /* IBInspectableShadow.swift */,
 			);
 			path = Inspectables;
@@ -112,6 +146,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4A7F0E191E85BB6400C35132 /* CoolDesignablesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A7F0E221E85BB6500C35132 /* Build configuration list for PBXNativeTarget "CoolDesignablesTests" */;
+			buildPhases = (
+				4A7F0E161E85BB6400C35132 /* Sources */,
+				4A7F0E171E85BB6400C35132 /* Frameworks */,
+				4A7F0E181E85BB6400C35132 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A7F0E211E85BB6500C35132 /* PBXTargetDependency */,
+			);
+			name = CoolDesignablesTests;
+			productName = CoolDesignablesTests;
+			productReference = 4A7F0E1A1E85BB6400C35132 /* CoolDesignablesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4ACA64D11E85381C00A977C0 /* CoolDesignables */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4ACA64DA1E85381D00A977C0 /* Build configuration list for PBXNativeTarget "CoolDesignables" */;
@@ -136,9 +188,14 @@
 		4ACA64C91E85381C00A977C0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Ricieri Labs";
 				TargetAttributes = {
+					4A7F0E191E85BB6400C35132 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					4ACA64D11E85381C00A977C0 = {
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0820;
@@ -159,11 +216,19 @@
 			projectRoot = "";
 			targets = (
 				4ACA64D11E85381C00A977C0 /* CoolDesignables */,
+				4A7F0E191E85BB6400C35132 /* CoolDesignablesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4A7F0E181E85BB6400C35132 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4ACA64D01E85381C00A977C0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +239,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4A7F0E161E85BB6400C35132 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A7F0E261E85BB9E00C35132 /* IBDesignableBlurTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4ACA64CD1E85381C00A977C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,7 +266,37 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4A7F0E211E85BB6500C35132 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4ACA64D11E85381C00A977C0 /* CoolDesignables */;
+			targetProxy = 4A7F0E201E85BB6500C35132 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		4A7F0E231E85BB6500C35132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CoolDesignablesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.ricieri.CoolDesignablesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4A7F0E241E85BB6500C35132 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CoolDesignablesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.ricieri.CoolDesignablesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		4ACA64D81E85381D00A977C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -335,6 +438,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4A7F0E221E85BB6500C35132 /* Build configuration list for PBXNativeTarget "CoolDesignablesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A7F0E231E85BB6500C35132 /* Debug */,
+				4A7F0E241E85BB6500C35132 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		4ACA64CC1E85381C00A977C0 /* Build configuration list for PBXProject "CoolDesignables" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
