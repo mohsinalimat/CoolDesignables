@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Foundation
 
 /**
  * UIViewShadow: An UIView with IBInspectable Drop Shadow
