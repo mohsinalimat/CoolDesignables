@@ -11,6 +11,8 @@
 		4A7F0E051E85A8DF00C35132 /* IBInspectableCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F0E041E85A8DF00C35132 /* IBInspectableCorner.swift */; };
 		4A7F0E0B1E85AA9D00C35132 /* IBInspectableBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F0E0A1E85AA9D00C35132 /* IBInspectableBorder.swift */; };
 		4A7F0E0D1E85AAA300C35132 /* IBDesignableBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F0E0C1E85AAA300C35132 /* IBDesignableBorder.swift */; };
+		4A7F0E0F1E85B2B600C35132 /* IBInspectableBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F0E0E1E85B2B600C35132 /* IBInspectableBlur.swift */; };
+		4A7F0E111E85B2BA00C35132 /* IBDesignableBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F0E101E85B2BA00C35132 /* IBDesignableBlur.swift */; };
 		4ACA64D71E85381D00A977C0 /* CoolDesignables.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ACA64D51E85381D00A977C0 /* CoolDesignables.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4ACA64E51E853AE000A977C0 /* IBInspectableShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA64E41E853AE000A977C0 /* IBInspectableShadow.swift */; };
 		4ACA64EF1E853F2400A977C0 /* IBDesignableShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA64EE1E853F2400A977C0 /* IBDesignableShadow.swift */; };
@@ -21,6 +23,8 @@
 		4A7F0E041E85A8DF00C35132 /* IBInspectableCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspectableCorner.swift; sourceTree = "<group>"; };
 		4A7F0E0A1E85AA9D00C35132 /* IBInspectableBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspectableBorder.swift; sourceTree = "<group>"; };
 		4A7F0E0C1E85AAA300C35132 /* IBDesignableBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableBorder.swift; sourceTree = "<group>"; };
+		4A7F0E0E1E85B2B600C35132 /* IBInspectableBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspectableBlur.swift; sourceTree = "<group>"; };
+		4A7F0E101E85B2BA00C35132 /* IBDesignableBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableBlur.swift; sourceTree = "<group>"; };
 		4ACA64D21E85381D00A977C0 /* CoolDesignables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoolDesignables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ACA64D51E85381D00A977C0 /* CoolDesignables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoolDesignables.h; sourceTree = "<group>"; };
 		4ACA64D61E85381D00A977C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,9 +73,10 @@
 		4ACA64E21E853AE000A977C0 /* Designables */ = {
 			isa = PBXGroup;
 			children = (
-				4ACA64EE1E853F2400A977C0 /* IBDesignableShadow.swift */,
-				4A7F0E021E85A8DC00C35132 /* IBDesignableCorner.swift */,
+				4A7F0E101E85B2BA00C35132 /* IBDesignableBlur.swift */,
 				4A7F0E0C1E85AAA300C35132 /* IBDesignableBorder.swift */,
+				4A7F0E021E85A8DC00C35132 /* IBDesignableCorner.swift */,
+				4ACA64EE1E853F2400A977C0 /* IBDesignableShadow.swift */,
 			);
 			path = Designables;
 			sourceTree = "<group>";
@@ -79,9 +84,10 @@
 		4ACA64E31E853AE000A977C0 /* Inspectables */ = {
 			isa = PBXGroup;
 			children = (
-				4ACA64E41E853AE000A977C0 /* IBInspectableShadow.swift */,
-				4A7F0E041E85A8DF00C35132 /* IBInspectableCorner.swift */,
+				4A7F0E0E1E85B2B600C35132 /* IBInspectableBlur.swift */,
 				4A7F0E0A1E85AA9D00C35132 /* IBInspectableBorder.swift */,
+				4A7F0E041E85A8DF00C35132 /* IBInspectableCorner.swift */,
+				4ACA64E41E853AE000A977C0 /* IBInspectableShadow.swift */,
 			);
 			path = Inspectables;
 			sourceTree = "<group>";
@@ -172,6 +178,8 @@
 				4A7F0E051E85A8DF00C35132 /* IBInspectableCorner.swift in Sources */,
 				4A7F0E0D1E85AAA300C35132 /* IBDesignableBorder.swift in Sources */,
 				4A7F0E031E85A8DC00C35132 /* IBDesignableCorner.swift in Sources */,
+				4A7F0E0F1E85B2B600C35132 /* IBInspectableBlur.swift in Sources */,
+				4A7F0E111E85B2BA00C35132 /* IBDesignableBlur.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
