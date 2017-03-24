@@ -20,6 +20,7 @@
 		4A7F0E281E85BEFC00C35132 /* IBDesignableBorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F0E271E85BEFC00C35132 /* IBDesignableBorderTests.swift */; };
 		4A8F99321E85C95100963802 /* IBDesignableCornerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8F99311E85C95100963802 /* IBDesignableCornerTests.swift */; };
 		4A8F99341E85CA1400963802 /* IBDesignableGradientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8F99331E85CA1400963802 /* IBDesignableGradientTests.swift */; };
+		4A8F99361E85CB7400963802 /* IBDesignableShadowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8F99351E85CB7400963802 /* IBDesignableShadowTests.swift */; };
 		4ACA64D71E85381D00A977C0 /* CoolDesignables.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ACA64D51E85381D00A977C0 /* CoolDesignables.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4ACA64E51E853AE000A977C0 /* IBInspectableShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA64E41E853AE000A977C0 /* IBInspectableShadow.swift */; };
 		4ACA64EF1E853F2400A977C0 /* IBDesignableShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA64EE1E853F2400A977C0 /* IBDesignableShadow.swift */; };
@@ -50,6 +51,7 @@
 		4A7F0E271E85BEFC00C35132 /* IBDesignableBorderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableBorderTests.swift; sourceTree = "<group>"; };
 		4A8F99311E85C95100963802 /* IBDesignableCornerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableCornerTests.swift; sourceTree = "<group>"; };
 		4A8F99331E85CA1400963802 /* IBDesignableGradientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableGradientTests.swift; sourceTree = "<group>"; };
+		4A8F99351E85CB7400963802 /* IBDesignableShadowTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableShadowTests.swift; sourceTree = "<group>"; };
 		4ACA64D21E85381D00A977C0 /* CoolDesignables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoolDesignables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ACA64D51E85381D00A977C0 /* CoolDesignables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoolDesignables.h; sourceTree = "<group>"; };
 		4ACA64D61E85381D00A977C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				4A7F0E271E85BEFC00C35132 /* IBDesignableBorderTests.swift */,
 				4A8F99311E85C95100963802 /* IBDesignableCornerTests.swift */,
 				4A8F99331E85CA1400963802 /* IBDesignableGradientTests.swift */,
+				4A8F99351E85CB7400963802 /* IBDesignableShadowTests.swift */,
 			);
 			path = CoolDesignablesTests;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				4A8F99321E85C95100963802 /* IBDesignableCornerTests.swift in Sources */,
 				4A7F0E281E85BEFC00C35132 /* IBDesignableBorderTests.swift in Sources */,
 				4A7F0E261E85BB9E00C35132 /* IBDesignableBlurTests.swift in Sources */,
+				4A8F99361E85CB7400963802 /* IBDesignableShadowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
