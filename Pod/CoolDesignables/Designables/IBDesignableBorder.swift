@@ -115,6 +115,12 @@ class UIViewBorderHorizontal : UIView, IBInspectableBorderHorizontal {
         }
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.drawTopBorder()
+        self.drawBottomBorder()
+    }
+    
     // Handling Borders
     
     /**
@@ -186,6 +192,12 @@ class UIImageViewBorderHorizontal : UIImageView, IBInspectableBorderHorizontal {
         }
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.drawTopBorder()
+        self.drawBottomBorder()
+    }
+    
     // Handling Borders
     
     /**
@@ -255,6 +267,12 @@ class UIButtonBorderHorizontal : UIButton, IBInspectableBorderHorizontal {
         didSet {
             self.layer.borderColor = borderColor.cgColor
         }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.drawTopBorder()
+        self.drawBottomBorder()
     }
     
     // Handling Borders
@@ -332,6 +350,12 @@ class UIViewBorderVertical : UIView, IBInspectableBorderVertical {
         }
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.drawLeftBorder()
+        self.drawRightBorder()
+    }
+    
     // Handling Borders
     
     /**
@@ -402,6 +426,12 @@ class UIImageViewBorderVertical : UIImageView, IBInspectableBorderVertical {
         }
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.drawLeftBorder()
+        self.drawRightBorder()
+    }
+    
     // Handling Borders
     
     /**
@@ -470,6 +500,12 @@ class UIButtonBorderVertical : UIButton, IBInspectableBorderVertical {
         didSet {
             self.drawRightBorder()
         }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.drawLeftBorder()
+        self.drawRightBorder()
     }
     
     // Handling Borders
