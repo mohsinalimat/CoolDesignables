@@ -269,7 +269,7 @@ open class UIButtonBorderHorizontal : UIButton, IBInspectableBorderHorizontal {
         }
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         self.drawTopBorder()
         self.drawBottomBorder()
