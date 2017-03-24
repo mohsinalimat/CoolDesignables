@@ -141,11 +141,16 @@ open class UIViewBorderHorizontal : UIView, IBInspectableBorderHorizontal {
         if  let border = currentBorderTop {
             border.removeFromSuperlayer()
         }
-        let newBorder = CALayer()
-        newBorder.frame = CGRect(x: 0.0, y: 1.0, width: self.frame.size.width, height: borderTop);
-        newBorder.backgroundColor = borderColor.cgColor
-        self.currentBorderTop = newBorder
-        self.layer.addSublayer(currentBorderTop!)
+        if  borderTop > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(x: 0.0, y: 1.0, width: self.frame.size.width, height: borderTop);
+            newBorder.backgroundColor = borderColor.cgColor
+            self.currentBorderTop = newBorder
+            self.layer.addSublayer(currentBorderTop!)
+        }
+        else {
+            self.currentBorderTop = nil
+        }
     }
     
     /**
@@ -155,11 +160,16 @@ open class UIViewBorderHorizontal : UIView, IBInspectableBorderHorizontal {
         if  let border = currentBorderBottom {
             border.removeFromSuperlayer()
         }
-        let newBorder = CALayer()
-        newBorder.frame = CGRect(x: 0.0, y: self.frame.size.height - borderBottom, width: self.frame.size.width, height: borderBottom);
-        newBorder.backgroundColor = borderColor.cgColor
-        self.currentBorderBottom = newBorder
-        self.layer.addSublayer(currentBorderBottom!)
+        if  borderBottom > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(x: 0.0, y: self.frame.size.height - borderBottom, width: self.frame.size.width, height: borderBottom);
+            newBorder.backgroundColor = borderColor.cgColor
+            self.currentBorderBottom = newBorder
+            self.layer.addSublayer(currentBorderBottom!)
+        }
+        else {
+            self.currentBorderBottom = nil
+        }
     }
 }
 
@@ -218,11 +228,16 @@ open class UIImageViewBorderHorizontal : UIImageView, IBInspectableBorderHorizon
         if  let border = currentBorderTop {
             border.removeFromSuperlayer()
         }
-        let newBorder = CALayer()
-        newBorder.frame = CGRect(x: 0.0, y: 1.0, width: self.frame.size.width, height: borderTop);
-        newBorder.backgroundColor = borderColor.cgColor
-        self.currentBorderTop = newBorder
-        self.layer.addSublayer(currentBorderTop!)
+        if  borderTop > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(x: 0.0, y: 1.0, width: self.frame.size.width, height: borderTop);
+            newBorder.backgroundColor = borderColor.cgColor
+            self.currentBorderTop = newBorder
+            self.layer.addSublayer(currentBorderTop!)
+        }
+        else {
+            self.currentBorderTop = nil
+        }
     }
     
     /**
@@ -232,11 +247,16 @@ open class UIImageViewBorderHorizontal : UIImageView, IBInspectableBorderHorizon
         if  let border = currentBorderBottom {
             border.removeFromSuperlayer()
         }
-        let newBorder = CALayer()
-        newBorder.frame = CGRect(x: 0.0, y: self.frame.size.height - borderBottom, width: self.frame.size.width, height: borderBottom);
-        newBorder.backgroundColor = borderColor.cgColor
-        self.currentBorderBottom = newBorder
-        self.layer.addSublayer(currentBorderBottom!)
+        if  borderBottom > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(x: 0.0, y: self.frame.size.height - borderBottom, width: self.frame.size.width, height: borderBottom);
+            newBorder.backgroundColor = borderColor.cgColor
+            self.currentBorderBottom = newBorder
+            self.layer.addSublayer(currentBorderBottom!)
+        }
+        else {
+            self.currentBorderBottom = nil
+        }
     }
 }
 
@@ -295,11 +315,16 @@ open class UIButtonBorderHorizontal : UIButton, IBInspectableBorderHorizontal {
         if  let border = currentBorderTop {
             border.removeFromSuperlayer()
         }
-        let newBorder = CALayer()
-        newBorder.frame = CGRect(x: 0.0, y: 1.0, width: self.frame.size.width, height: borderTop);
-        newBorder.backgroundColor = borderColor.cgColor
-        self.currentBorderTop = newBorder
-        self.layer.addSublayer(currentBorderTop!)
+        if  borderTop > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(x: 0.0, y: 1.0, width: self.frame.size.width, height: borderTop);
+            newBorder.backgroundColor = borderColor.cgColor
+            self.currentBorderTop = newBorder
+            self.layer.addSublayer(currentBorderTop!)
+        }
+        else {
+            self.currentBorderTop = nil
+        }
     }
     
     /**
@@ -309,11 +334,16 @@ open class UIButtonBorderHorizontal : UIButton, IBInspectableBorderHorizontal {
         if  let border = currentBorderBottom {
             border.removeFromSuperlayer()
         }
-        let newBorder = CALayer()
-        newBorder.frame = CGRect(x: 0.0, y: self.frame.size.height - borderBottom, width: self.frame.size.width, height: borderBottom);
-        newBorder.backgroundColor = borderColor.cgColor
-        self.currentBorderBottom = newBorder
-        self.layer.addSublayer(currentBorderBottom!)
+        if  borderBottom > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(x: 0.0, y: self.frame.size.height - borderBottom, width: self.frame.size.width, height: borderBottom);
+            newBorder.backgroundColor = borderColor.cgColor
+            self.currentBorderBottom = newBorder
+            self.layer.addSublayer(currentBorderBottom!)
+        }
+        else {
+            self.currentBorderBottom = nil
+        }
     }
 }
 
@@ -375,11 +405,16 @@ open class UIViewBorderVertical : UIView, IBInspectableBorderVertical {
         if  let border = currentBorderLeft {
             border.removeFromSuperlayer()
         }
-        let newBorder = CALayer()
-        newBorder.frame = CGRect(x: 0.0, y: 0.0, width: borderLeft, height: self.frame.size.height);
-        newBorder.backgroundColor = borderColor.cgColor
-        self.currentBorderLeft = newBorder
-        self.layer.addSublayer(currentBorderLeft!)
+        if  borderLeft > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(x: 0.0, y: 0.0, width: borderLeft, height: self.frame.size.height);
+            newBorder.backgroundColor = borderColor.cgColor
+            self.currentBorderLeft = newBorder
+            self.layer.addSublayer(currentBorderLeft!)
+        }
+        else {
+            self.currentBorderLeft = nil
+        }
     }
     
     /**
@@ -389,11 +424,16 @@ open class UIViewBorderVertical : UIView, IBInspectableBorderVertical {
         if  let border = currentBorderRight {
             border.removeFromSuperlayer()
         }
-        let newBorder = CALayer()
-        newBorder.frame = CGRect(x: self.frame.size.width - borderRight, y: 0, width: borderRight, height: self.frame.size.height);
-        newBorder.backgroundColor = borderColor.cgColor
-        self.currentBorderRight = newBorder
-        self.layer.addSublayer(currentBorderRight!)
+        if  borderRight > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(x: self.frame.size.width - borderRight, y: 0, width: borderRight, height: self.frame.size.height);
+            newBorder.backgroundColor = borderColor.cgColor
+            self.currentBorderRight = newBorder
+            self.layer.addSublayer(currentBorderRight!)
+        }
+        else {
+            self.currentBorderRight = nil
+        }
     }
 }
 
@@ -451,11 +491,16 @@ open class UIImageViewBorderVertical : UIImageView, IBInspectableBorderVertical 
         if  let border = currentBorderLeft {
             border.removeFromSuperlayer()
         }
-        let newBorder = CALayer()
-        newBorder.frame = CGRect(x: 0.0, y: 0.0, width: borderLeft, height: self.frame.size.height);
-        newBorder.backgroundColor = borderColor.cgColor
-        self.currentBorderLeft = newBorder
-        self.layer.addSublayer(currentBorderLeft!)
+        if  borderLeft > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(x: 0.0, y: 0.0, width: borderLeft, height: self.frame.size.height);
+            newBorder.backgroundColor = borderColor.cgColor
+            self.currentBorderLeft = newBorder
+            self.layer.addSublayer(currentBorderLeft!)
+        }
+        else {
+            self.currentBorderLeft = nil
+        }
     }
     
     /**
@@ -465,11 +510,16 @@ open class UIImageViewBorderVertical : UIImageView, IBInspectableBorderVertical 
         if  let border = currentBorderRight {
             border.removeFromSuperlayer()
         }
-        let newBorder = CALayer()
-        newBorder.frame = CGRect(x: self.frame.size.width - borderRight, y: 0, width: borderRight, height: self.frame.size.height);
-        newBorder.backgroundColor = borderColor.cgColor
-        self.currentBorderRight = newBorder
-        self.layer.addSublayer(currentBorderRight!)
+        if  borderRight > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(x: self.frame.size.width - borderRight, y: 0, width: borderRight, height: self.frame.size.height);
+            newBorder.backgroundColor = borderColor.cgColor
+            self.currentBorderRight = newBorder
+            self.layer.addSublayer(currentBorderRight!)
+        }
+        else {
+            self.currentBorderRight = nil
+        }
     }
 }
 
@@ -527,11 +577,16 @@ open class UIButtonBorderVertical : UIButton, IBInspectableBorderVertical {
         if  let border = currentBorderLeft {
             border.removeFromSuperlayer()
         }
-        let newBorder = CALayer()
-        newBorder.frame = CGRect(x: 0.0, y: 0.0, width: borderLeft, height: self.frame.size.height);
-        newBorder.backgroundColor = borderColor.cgColor
-        self.currentBorderLeft = newBorder
-        self.layer.addSublayer(currentBorderLeft!)
+        if  borderLeft > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(x: 0.0, y: 0.0, width: borderLeft, height: self.frame.size.height);
+            newBorder.backgroundColor = borderColor.cgColor
+            self.currentBorderLeft = newBorder
+            self.layer.addSublayer(currentBorderLeft!)
+        }
+        else {
+            self.currentBorderLeft = nil
+        }
     }
     
     /**
@@ -541,11 +596,16 @@ open class UIButtonBorderVertical : UIButton, IBInspectableBorderVertical {
         if  let border = currentBorderRight {
             border.removeFromSuperlayer()
         }
-        let newBorder = CALayer()
-        newBorder.frame = CGRect(x: self.frame.size.width - borderRight, y: 0, width: borderRight, height: self.frame.size.height);
-        newBorder.backgroundColor = borderColor.cgColor
-        self.currentBorderRight = newBorder
-        self.layer.addSublayer(currentBorderRight!)
+        if  borderRight > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(x: self.frame.size.width - borderRight, y: 0, width: borderRight, height: self.frame.size.height);
+            newBorder.backgroundColor = borderColor.cgColor
+            self.currentBorderRight = newBorder
+            self.layer.addSublayer(currentBorderRight!)
+        }
+        else {
+            self.currentBorderRight = nil
+        }
     }
 }
 
