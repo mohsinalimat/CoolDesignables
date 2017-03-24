@@ -82,6 +82,9 @@ class UIViewBlurBackground : UIView, IBInspectableBlur {
     @IBInspectable
     var blurOpacity : CGFloat = 1.0
     
+    /**
+     * Previous Blur View
+     */
     internal var blurBackgroundView : UIVisualEffectView?
     
     /**
