@@ -18,6 +18,7 @@
 		4A7F0E1F1E85BB6500C35132 /* CoolDesignables.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACA64D21E85381D00A977C0 /* CoolDesignables.framework */; };
 		4A7F0E261E85BB9E00C35132 /* IBDesignableBlurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F0E251E85BB9E00C35132 /* IBDesignableBlurTests.swift */; };
 		4A7F0E281E85BEFC00C35132 /* IBDesignableBorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7F0E271E85BEFC00C35132 /* IBDesignableBorderTests.swift */; };
+		4A8F99321E85C95100963802 /* IBDesignableCornerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8F99311E85C95100963802 /* IBDesignableCornerTests.swift */; };
 		4ACA64D71E85381D00A977C0 /* CoolDesignables.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ACA64D51E85381D00A977C0 /* CoolDesignables.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4ACA64E51E853AE000A977C0 /* IBInspectableShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA64E41E853AE000A977C0 /* IBInspectableShadow.swift */; };
 		4ACA64EF1E853F2400A977C0 /* IBDesignableShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA64EE1E853F2400A977C0 /* IBDesignableShadow.swift */; };
@@ -46,6 +47,7 @@
 		4A7F0E1E1E85BB6400C35132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A7F0E251E85BB9E00C35132 /* IBDesignableBlurTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableBlurTests.swift; sourceTree = "<group>"; };
 		4A7F0E271E85BEFC00C35132 /* IBDesignableBorderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableBorderTests.swift; sourceTree = "<group>"; };
+		4A8F99311E85C95100963802 /* IBDesignableCornerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableCornerTests.swift; sourceTree = "<group>"; };
 		4ACA64D21E85381D00A977C0 /* CoolDesignables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoolDesignables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ACA64D51E85381D00A977C0 /* CoolDesignables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoolDesignables.h; sourceTree = "<group>"; };
 		4ACA64D61E85381D00A977C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				4A7F0E1E1E85BB6400C35132 /* Info.plist */,
 				4A7F0E251E85BB9E00C35132 /* IBDesignableBlurTests.swift */,
 				4A7F0E271E85BEFC00C35132 /* IBDesignableBorderTests.swift */,
+				4A8F99311E85C95100963802 /* IBDesignableCornerTests.swift */,
 			);
 			path = CoolDesignablesTests;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8F99321E85C95100963802 /* IBDesignableCornerTests.swift in Sources */,
 				4A7F0E281E85BEFC00C35132 /* IBDesignableBorderTests.swift in Sources */,
 				4A7F0E261E85BB9E00C35132 /* IBDesignableBlurTests.swift in Sources */,
 			);
@@ -449,6 +453,7 @@
 				4A7F0E241E85BB6500C35132 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4ACA64CC1E85381C00A977C0 /* Build configuration list for PBXProject "CoolDesignables" */ = {
 			isa = XCConfigurationList;
