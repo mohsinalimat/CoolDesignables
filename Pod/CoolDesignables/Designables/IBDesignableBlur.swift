@@ -82,30 +82,6 @@ open class UIViewBlurBackground : UIView, IBInspectableBlur {
     @IBInspectable
     open var blurOpacity : CGFloat = 1.0
     
-    /**
-     * Previous Blur View
-     */
-    internal var blurBackgroundView : UIVisualEffectView?
-    
-    /**
-     * Adds the Blur background view as subview
-     *
-     * @param style     The Blur Effect Style
-     */
-    final internal func addBlurViewWith(style: UIBlurEffectStyle) {
-        
-        if  let previous = blurBackgroundView {
-            previous.removeFromSuperview()
-        }
-        
-        let blurEffect = UIBlurEffect(style: style)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = self.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurEffectView.alpha = blurOpacity
-        
-        self.blurBackgroundView = blurEffectView
-        self.addSubview(self.blurBackgroundView!)
-        self.sendSubview(toBack: self.blurBackgroundView!)
-    }
+    public var bindView: UIView!
+    public var blurBackgroundView : UIVisualEffectView?
 }
