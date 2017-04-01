@@ -8,6 +8,36 @@
 
 import UIKit
 
+/**
+ * CD_applyGradientTo:view:
+ * Applies the default setup for IBInspectableCorner protocol
+ *
+ * @param view      the view itself
+ */
+func CD_applyGradientTo(view: UIView) {
+    
+    if  let inspectable = view as? IBInspectableGradient,
+        var inspectableHistory = view as? HasGradient {
+        
+        // Removes previous effect
+        if  let gradient = inspectable.gradientView {
+            gradient.removeFromSuperview()
+        }
+        inspectableHistory.gradientView = UIView(frame: view.bounds)
+        
+        let sublayer = CAGradientLayer()
+        sublayer.frame = view.bounds
+        sublayer.colors = [inspectable.firstColor.cgColor, inspectable.secondColor.cgColor]
+        if  inspectable.isHorizontal {
+            sublayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+            sublayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        }
+        
+        inspectableHistory.gradientView!.layer.addSublayer(sublayer)
+        view.addSubview(inspectableHistory.gradientView!)
+        view.sendSubview(toBack: inspectableHistory.gradientView!)
+    }
+}
 
 /**
  * UIViewGradientBackground: Gradient Background Designable
@@ -20,57 +50,29 @@ open class UIViewGradientBackground : UIView, IBInspectableGradient {
     @IBInspectable
     open var firstColor: UIColor = .black {
         didSet {
-            self.applyGradient()
+            CD_applyGradientTo(view: self)
         }
     }
     
     @IBInspectable
     open var secondColor : UIColor = .white {
         didSet {
-            self.applyGradient()
+            CD_applyGradientTo(view: self)
         }
     }
     
     @IBInspectable
     open var isHorizontal : Bool = false {
         didSet {
-            self.applyGradient()
+            CD_applyGradientTo(view: self)
         }
     }
+    
+    public(set) open var gradientView : UIView?
     
     override open func layoutSubviews() {
         super.layoutSubviews()
-        self.applyGradient()
-    }
-    
-    // Handling gradient
-    
-    /**
-     * Previous Gradient View
-     */
-    fileprivate(set) open var gradientView : UIView?
-    
-    /**
-     * Apply the Gradient background view as subview
-     */
-    fileprivate func applyGradient() {
-        
-        if  let gradient = self.gradientView {
-            gradient.removeFromSuperview()
-        }
-        gradientView = UIView(frame: self.bounds)
-        
-        let sublayer = CAGradientLayer()
-        sublayer.frame = self.bounds
-        sublayer.colors = [self.firstColor.cgColor, self.secondColor.cgColor]
-        if  isHorizontal {
-            sublayer.startPoint = CGPoint(x: 0.0, y: 0.5)
-            sublayer.endPoint = CGPoint(x: 1.0, y: 0.5)
-        }
-        
-        self.gradientView!.layer.addSublayer(sublayer)
-        self.addSubview(self.gradientView!)
-        self.sendSubview(toBack: self.gradientView!)
+        CD_applyGradientTo(view: self)
     }
 }
 

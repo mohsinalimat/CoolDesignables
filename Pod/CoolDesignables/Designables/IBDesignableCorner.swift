@@ -9,6 +9,19 @@
 import UIKit
 
 /**
+ * CD_applyCornerTo:view:
+ * Applies the default setup for IBInspectableCorner protocol
+ *
+ * @param view      the view itself
+ */
+func CD_applyCornerTo(view: UIView) {
+    if  let inspectable = view as? IBInspectableCorner {
+        view.layer.cornerRadius = inspectable.cornerRadius
+        view.layer.masksToBounds = inspectable.cornerRadius > 0
+    }
+}
+
+/**
  * UIViewCorner: An UIView with IBInspectable Corner
  * @discussion: For more information about the properties, check the IBInspectableCorner protocol
  */
@@ -19,8 +32,7 @@ open class UIViewCorner : UIView, IBInspectableCorner {
     @IBInspectable
     open var cornerRadius: CGFloat = 0 {
         didSet {
-            self.layer.cornerRadius = cornerRadius
-            self.layer.masksToBounds = cornerRadius > 0
+            CD_applyCornerTo(view: self)
         }
     }
 }
@@ -36,8 +48,7 @@ open class UIImageViewCorner : UIImageView, IBInspectableCorner {
     @IBInspectable
     open var cornerRadius: CGFloat = 0 {
         didSet {
-            self.layer.cornerRadius = cornerRadius
-            self.layer.masksToBounds = cornerRadius > 0
+            CD_applyCornerTo(view: self)
         }
     }
 }
@@ -53,8 +64,7 @@ open class UIButtonCorner : UIButton, IBInspectableCorner {
     @IBInspectable
     open var cornerRadius: CGFloat = 0 {
         didSet {
-            self.layer.cornerRadius = cornerRadius
-            self.layer.masksToBounds = cornerRadius > 0
+            CD_applyCornerTo(view: self)
         }
     }
 }

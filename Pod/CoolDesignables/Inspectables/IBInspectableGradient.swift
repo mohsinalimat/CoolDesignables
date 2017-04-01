@@ -10,9 +10,20 @@ import UIKit
 
 
 /**
+ * Adds to your IBDesignable just Vertical Borders CALayers
+ */
+public protocol HasGradient {
+    
+    /**
+     * Previous Gradient View
+     */
+    var gradientView : UIView? { get set }
+}
+
+/**
  * Adds to your IBDesignable a Gradient Background (subview)
  */
-public protocol IBInspectableGradient : class {
+public protocol IBInspectableGradient : class, HasGradient {
     
     /**
      * First UI Color

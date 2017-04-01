@@ -27,9 +27,25 @@ public protocol IBInspectableBorder : class {
 
 
 /**
+ * Adds to your IBDesignable just Vertical Borders CALayers
+ */
+public protocol HasHorizontalBorders {
+    
+    /**
+     * (Current) Top Border attribute (a CALayer will be drawed)
+     */
+    var currentBorderTop : CALayer? { get set }
+    
+    /**
+     * (Current) Bottom Border attribute (a CALayer will be drawed)
+     */
+    var currentBorderBottom : CALayer? { get set }
+}
+
+/**
  * Adds to your IBDesignable just Horizontal Borders CALayers
  */
-public protocol IBInspectableBorderHorizontal : class {
+public protocol IBInspectableBorderHorizontal : class, HasHorizontalBorders {
     
     /**
      * Shortcut to the CALayer borderColor
@@ -51,7 +67,23 @@ public protocol IBInspectableBorderHorizontal : class {
 /**
  * Adds to your IBDesignable just Vertical Borders CALayers
  */
-public protocol IBInspectableBorderVertical : class {
+public protocol HasVerticalBorders {
+    
+    /**
+     * (Current) Left Border attribute (a CALayer will be drawed)
+     */
+    var currentBorderLeft : CALayer? { get set }
+    
+    /**
+     * (Current) Right Border attribute (a CALayer will be drawed)
+     */
+    var currentBorderRight : CALayer? { get set }
+}
+
+/**
+ * Adds to your IBDesignable just Vertical Borders CALayers
+ */
+public protocol IBInspectableBorderVertical : class, HasVerticalBorders {
     
     /**
      * Shortcut to the CALayer borderColor
