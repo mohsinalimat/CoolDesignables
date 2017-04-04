@@ -9,6 +9,9 @@
 import UIKit
 
 
+// MARK: - Interfaces
+
+
 /**
  * Adds to your IBDesignable the Border Width IBInspectable
  */
@@ -99,5 +102,132 @@ public protocol IBInspectableBorderVertical : class, HasVerticalBorders {
      * Right Border attribute (a CALayer will be drawed)
      */
     var borderRight : CGFloat { get set }
+}
+
+
+// MARK: - Implementations
+
+
+extension IBInspectableBorderHorizontal where Self : UIView {
+    
+    /**
+     * drawTopBorder / drawBottomBorder
+     * Applies the default setup for IBInspectableBorderHorizontal protocol
+     */
+    func drawTopBorder() {
+        
+        // Removes previous border
+        if  let border = self.currentBorderTop {
+            border.removeFromSuperlayer()
+        }
+        var hasBorders = self as HasHorizontalBorders
+        
+        // Adds top border if its is
+        // bigger than 0
+        if  self.borderTop > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(
+                x: 0.0,
+                y: 1.0,
+                width: self.frame.size.width,
+                height: self.borderTop
+            )
+            newBorder.backgroundColor = self.borderColor.cgColor
+            hasBorders.currentBorderTop = newBorder
+            self.layer.addSublayer(hasBorders.currentBorderTop!)
+        }
+        else {
+            hasBorders.currentBorderTop = nil
+        }
+    }
+    
+    func drawBottomBorder() {
+        
+        // Removes previous border
+        if  let border = self.currentBorderBottom {
+            border.removeFromSuperlayer()
+        }
+        var hasBorders = self as HasHorizontalBorders
+        
+        // Adds bottom border if its is
+        // bigger than 0
+        if  self.borderBottom > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(
+                x: 0.0,
+                y: self.frame.size.height - self.borderBottom,
+                width: self.frame.size.width,
+                height: self.borderBottom
+            )
+            newBorder.backgroundColor = self.borderColor.cgColor
+            hasBorders.currentBorderBottom = newBorder
+            self.layer.addSublayer(hasBorders.currentBorderBottom!)
+        }
+        else {
+            hasBorders.currentBorderBottom = nil
+        }
+    }
+}
+
+
+extension IBInspectableBorderVertical where Self : UIView {
+    
+    /**
+     * drawLeftBorder / drawRightBorder
+     * Applies the default setup for IBInspectableBorderVertical protocol
+     */
+    func drawLeftBorder() {
+        
+        // Removes previous border
+        if  let border = self.currentBorderLeft {
+            border.removeFromSuperlayer()
+        }
+        var hasBorders = self as HasVerticalBorders
+        
+        // Adds left border if its is
+        // bigger than 0
+        if  self.borderLeft > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(
+                x: 0.0,
+                y: 0.0,
+                width: self.borderLeft,
+                height: self.frame.size.height
+            )
+            newBorder.backgroundColor = self.borderColor.cgColor
+            hasBorders.currentBorderLeft = newBorder
+            self.layer.addSublayer(hasBorders.currentBorderLeft!)
+        }
+        else {
+            hasBorders.currentBorderLeft = nil
+        }
+    }
+    
+    func drawRightBorder() {
+        
+        // Removes previous border
+        if  let border = self.currentBorderRight {
+            border.removeFromSuperlayer()
+        }
+        var hasBorders = self as HasVerticalBorders
+        
+        // Adds right border if its is
+        // bigger than 0
+        if  self.borderRight > 0 {
+            let newBorder = CALayer()
+            newBorder.frame = CGRect(
+                x: self.frame.size.width - self.borderRight,
+                y: 0,
+                width: self.borderRight,
+                height: self.frame.size.height
+            )
+            newBorder.backgroundColor = self.borderColor.cgColor
+            hasBorders.currentBorderRight = newBorder
+            self.layer.addSublayer(hasBorders.currentBorderRight!)
+        }
+        else {
+            hasBorders.currentBorderRight = nil
+        }
+    }
 }
 

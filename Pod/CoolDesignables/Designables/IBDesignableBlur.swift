@@ -9,35 +9,6 @@
 import UIKit
 
 /**
- * CD_addBlurViewWith:style:toView
- * Adds the Blur background view as subview
- *
- * @param style     The Blur Effect Style
- */
-func CD_addBlurViewWith(style: UIBlurEffectStyle, toView: UIView) {
-    
-    if  let inspectable = toView as? IBInspectableBlur {
-        
-        // Removes previous effect
-        if  let previous = inspectable.blurBackgroundView {
-            previous.removeFromSuperview()
-        }
-        
-        // Blur Effect View
-        let blurEffect = UIBlurEffect(style: style)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = toView.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        blurEffectView.alpha = inspectable.blurOpacity
-        
-        // Applies
-        inspectable.blurBackgroundView = blurEffectView
-        toView.addSubview(inspectable.blurBackgroundView!)
-        toView.sendSubview(toBack: inspectable.blurBackgroundView!)
-    }
-}
-
-/**
  * UIViewBlurBackgroundDark: Dark Blur Background Designable
  * @discussion: For more information about the properties, check the UIViewBlurBackground protocol
  */
@@ -47,12 +18,12 @@ open class UIViewBlurBackgroundDark : UIViewBlurBackground {
     
     override open var blurOpacity: CGFloat {
         didSet {
-            CD_addBlurViewWith(style: .dark, toView: self)
+            addBlurViewWith(style: .dark)
         }
     }
     
     override open func layoutSubviews() {
-        CD_addBlurViewWith(style: .dark, toView: self)
+        addBlurViewWith(style: .dark)
         super.layoutSubviews()
     }
 }
@@ -68,12 +39,12 @@ open class UIViewBlurBackgroundLight : UIViewBlurBackground {
     
     override open var blurOpacity: CGFloat {
         didSet {
-            CD_addBlurViewWith(style: .light, toView: self)
+            addBlurViewWith(style: .light)
         }
     }
     
     override open func layoutSubviews() {
-        CD_addBlurViewWith(style: .light, toView: self)
+        addBlurViewWith(style: .light)
         super.layoutSubviews()
     }
 }
@@ -89,12 +60,12 @@ open class UIViewBlurBackgroundExtraLight : UIViewBlurBackground {
     
     override open var blurOpacity: CGFloat {
         didSet {
-            CD_addBlurViewWith(style: .extraLight, toView: self)
+            addBlurViewWith(style: .extraLight)
         }
     }
     
     override open func layoutSubviews() {
-        CD_addBlurViewWith(style: .extraLight, toView: self)
+        addBlurViewWith(style: .extraLight)
         super.layoutSubviews()
     }
 }

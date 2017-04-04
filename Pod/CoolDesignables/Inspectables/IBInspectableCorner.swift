@@ -18,3 +18,16 @@ public protocol IBInspectableCorner : class {
      */
     var cornerRadius : CGFloat { get set }
 }
+
+
+extension IBInspectableCorner where Self : UIView {
+    
+    /**
+     * applyCorner
+     * Applies the default setup for IBInspectableCorner protocol
+     */
+    func applyCorner() {
+        self.layer.cornerRadius = inspectable.cornerRadius
+        self.layer.masksToBounds = inspectable.cornerRadius > 0
+    }
+}

@@ -8,138 +8,6 @@
 
 import UIKit
 
-/**
- * CD_drawTopBorderTo:view: / CD_drawBottomBorderTo:view:
- * Applies the default setup for IBInspectableBorderHorizontal protocol
- *
- * @param view      the view itself
- */
-func CD_drawTopBorderTo(view: UIView) {
-    
-    if  var inspectableHistory = view as? HasHorizontalBorders,
-        let inspectable = view as? IBInspectableBorderHorizontal {
-        
-        // Removes previous border
-        if  let border = inspectableHistory.currentBorderTop {
-            border.removeFromSuperlayer()
-        }
-        
-        // Adds top border if its is 
-        // bigger than 0
-        if  inspectable.borderTop > 0 {
-            let newBorder = CALayer()
-            newBorder.frame = CGRect(
-                x: 0.0,
-                y: 1.0,
-                width: view.frame.size.width,
-                height: inspectable.borderTop
-            )
-            newBorder.backgroundColor = inspectable.borderColor.cgColor
-            inspectableHistory.currentBorderTop = newBorder
-            view.layer.addSublayer(inspectableHistory.currentBorderTop!)
-        }
-        else {
-            inspectableHistory.currentBorderTop = nil
-        }
-    }
-}
-
-func CD_drawBottomBorderTo(view: UIView) {
-    
-    if  var inspectableHistory = view as? HasHorizontalBorders,
-        let inspectable = view as? IBInspectableBorderHorizontal {
-        
-        // Removes previous border
-        if  let border = inspectableHistory.currentBorderBottom {
-            border.removeFromSuperlayer()
-        }
-        
-        // Adds bottom border if its is
-        // bigger than 0
-        if  inspectable.borderBottom > 0 {
-            let newBorder = CALayer()
-            newBorder.frame = CGRect(
-                x: 0.0,
-                y: view.frame.size.height - inspectable.borderBottom,
-                width: view.frame.size.width,
-                height: inspectable.borderBottom
-            )
-            newBorder.backgroundColor = inspectable.borderColor.cgColor
-            inspectableHistory.currentBorderBottom = newBorder
-            view.layer.addSublayer(inspectableHistory.currentBorderBottom!)
-        }
-        else {
-            inspectableHistory.currentBorderBottom = nil
-        }
-    }
-}
-
-/**
- * CD_drawLeftBorderTo:view: / CD_drawRightBorderTo:view:
- * Applies the default setup for IBInspectableBorderVertical protocol
- *
- * @param view      the view itself
- */
-func CD_drawLeftBorderTo(view: UIView) {
-    
-    if  var inspectableHistory = view as? HasVerticalBorders,
-        let inspectable = view as? IBInspectableBorderVertical {
-        
-        // Removes previous border
-        if  let border = inspectableHistory.currentBorderLeft {
-            border.removeFromSuperlayer()
-        }
-        
-        // Adds left border if its is
-        // bigger than 0
-        if  inspectable.borderLeft > 0 {
-            let newBorder = CALayer()
-            newBorder.frame = CGRect(
-                x: 0.0,
-                y: 0.0,
-                width: inspectable.borderLeft,
-                height: view.frame.size.height
-            )
-            newBorder.backgroundColor = inspectable.borderColor.cgColor
-            inspectableHistory.currentBorderLeft = newBorder
-            view.layer.addSublayer(inspectableHistory.currentBorderLeft!)
-        }
-        else {
-            inspectableHistory.currentBorderLeft = nil
-        }
-    }
-}
-
-func CD_drawRightBorderTo(view: UIView) {
-    
-    if  var inspectableHistory = view as? HasVerticalBorders,
-        let inspectable = view as? IBInspectableBorderVertical {
-        
-        // Removes previous border
-        if  let border = inspectableHistory.currentBorderRight {
-            border.removeFromSuperlayer()
-        }
-        
-        // Adds right border if its is
-        // bigger than 0
-        if  inspectable.borderRight > 0 {
-            let newBorder = CALayer()
-            newBorder.frame = CGRect(
-                x: view.frame.size.width - inspectable.borderRight,
-                y: 0,
-                width: inspectable.borderRight,
-                height: view.frame.size.height
-            )
-            newBorder.backgroundColor = inspectable.borderColor.cgColor
-            inspectableHistory.currentBorderRight = newBorder
-            view.layer.addSublayer(inspectableHistory.currentBorderRight!)
-        }
-        else {
-            inspectableHistory.currentBorderRight = nil
-        }
-    }
-}
-
 
 // MARK: - IBInspectableBorder
 
@@ -228,14 +96,14 @@ open class UIViewBorderHorizontal : UIView, IBInspectableBorderHorizontal {
     @IBInspectable
     open var borderTop: CGFloat = 1.0 {
         didSet {
-            CD_drawTopBorderTo(view: self)
+            drawTopBorder()
         }
     }
     
     @IBInspectable
     open var borderBottom: CGFloat = 1.0 {
         didSet {
-            CD_drawBottomBorderTo(view: self)
+            drawBottomBorder()
         }
     }
     
@@ -251,8 +119,8 @@ open class UIViewBorderHorizontal : UIView, IBInspectableBorderHorizontal {
     
     override open func layoutSubviews() {
         super.layoutSubviews()
-        CD_drawTopBorderTo(view: self)
-        CD_drawBottomBorderTo(view: self)
+        drawTopBorder()
+        drawBottomBorder()
     }
 }
 
@@ -267,14 +135,14 @@ open class UIImageViewBorderHorizontal : UIImageView, IBInspectableBorderHorizon
     @IBInspectable
     open var borderTop: CGFloat = 1.0 {
         didSet {
-            CD_drawTopBorderTo(view: self)
+            drawTopBorder()
         }
     }
     
     @IBInspectable
     open var borderBottom: CGFloat = 1.0 {
         didSet {
-            CD_drawBottomBorderTo(view: self)
+            drawBottomBorder()
         }
     }
     
@@ -290,8 +158,8 @@ open class UIImageViewBorderHorizontal : UIImageView, IBInspectableBorderHorizon
     
     override open func layoutSubviews() {
         super.layoutSubviews()
-        CD_drawTopBorderTo(view: self)
-        CD_drawBottomBorderTo(view: self)
+        drawTopBorder()
+        drawBottomBorder()
     }
 }
 
@@ -306,14 +174,14 @@ open class UIButtonBorderHorizontal : UIButton, IBInspectableBorderHorizontal {
     @IBInspectable
     open var borderTop: CGFloat = 1.0 {
         didSet {
-            CD_drawTopBorderTo(view: self)
+            drawTopBorder()
         }
     }
     
     @IBInspectable
     open var borderBottom: CGFloat = 1.0 {
         didSet {
-            CD_drawBottomBorderTo(view: self)
+            drawBottomBorder()
         }
     }
     
@@ -329,8 +197,8 @@ open class UIButtonBorderHorizontal : UIButton, IBInspectableBorderHorizontal {
     
     override open func layoutSubviews() {
         super.layoutSubviews()
-        CD_drawTopBorderTo(view: self)
-        CD_drawBottomBorderTo(view: self)
+        drawTopBorder()
+        drawBottomBorder()
     }
 }
 
@@ -356,14 +224,14 @@ open class UIViewBorderVertical : UIView, IBInspectableBorderVertical {
     @IBInspectable
     open var borderLeft: CGFloat = 1.0 {
         didSet {
-            CD_drawLeftBorderTo(view: self)
+            drawLeftBorder()
         }
     }
     
     @IBInspectable
     open var borderRight: CGFloat = 1.0 {
         didSet {
-            CD_drawRightBorderTo(view: self)
+            drawRightBorder()
         }
     }
     
@@ -372,8 +240,8 @@ open class UIViewBorderVertical : UIView, IBInspectableBorderVertical {
     
     override open func layoutSubviews() {
         super.layoutSubviews()
-        CD_drawLeftBorderTo(view: self)
-        CD_drawRightBorderTo(view: self)
+        drawLeftBorder()
+        drawRightBorder()
     }
 }
 
@@ -395,14 +263,14 @@ open class UIImageViewBorderVertical : UIImageView, IBInspectableBorderVertical 
     @IBInspectable
     open var borderLeft: CGFloat = 1.0 {
         didSet {
-            CD_drawLeftBorderTo(view: self)
+            drawLeftBorder()
         }
     }
     
     @IBInspectable
     open var borderRight: CGFloat = 1.0 {
         didSet {
-            CD_drawRightBorderTo(view: self)
+            drawRightBorder()
         }
     }
     
@@ -411,8 +279,8 @@ open class UIImageViewBorderVertical : UIImageView, IBInspectableBorderVertical 
     
     override open func layoutSubviews() {
         super.layoutSubviews()
-        CD_drawLeftBorderTo(view: self)
-        CD_drawRightBorderTo(view: self)
+        drawLeftBorder()
+        drawRightBorder()
     }
 }
 
@@ -434,14 +302,14 @@ open class UIButtonBorderVertical : UIButton, IBInspectableBorderVertical {
     @IBInspectable
     open var borderLeft: CGFloat = 1.0 {
         didSet {
-            CD_drawLeftBorderTo(view: self)
+            drawLeftBorder()
         }
     }
     
     @IBInspectable
     open var borderRight: CGFloat = 1.0 {
         didSet {
-            CD_drawRightBorderTo(view: self)
+            drawRightBorder()
         }
     }
     
@@ -450,8 +318,8 @@ open class UIButtonBorderVertical : UIButton, IBInspectableBorderVertical {
     
     override open func layoutSubviews() {
         super.layoutSubviews()
-        CD_drawLeftBorderTo(view: self)
-        CD_drawRightBorderTo(view: self)
+        drawLeftBorder()
+        drawRightBorder()
     }
 }
 

@@ -24,3 +24,32 @@ public protocol IBInspectableBlur : class {
      */
     var blurBackgroundView : UIVisualEffectView? { get set }
 }
+
+extension IBInspectableBlur where Self : UIView {
+    
+    /**
+     * addBlurViewWith:style:toView
+     * Adds the Blur background view as subview
+     *
+     * @param style     The Blur Effect Style
+     */
+    func addBlurViewWith(style: UIBlurEffectStyle) {
+        
+        // Removes previous effect
+        if  let previous = self.blurBackgroundView {
+            previous.removeFromSuperview()
+        }
+        
+        // Blur Effect View
+        let blurEffect = UIBlurEffect(style: style)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView.alpha = self.blurOpacity
+        
+        // Applies
+        self.blurBackgroundView = blurEffectView
+        self.addSubview(self.blurBackgroundView!)
+        self.sendSubview(toBack: self.blurBackgroundView!)
+    }
+}

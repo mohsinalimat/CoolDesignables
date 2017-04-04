@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 /**
  * Adds to your IBDesignable just Vertical Borders CALayers
  */
@@ -41,3 +40,35 @@ public protocol IBInspectableGradient : class, HasGradient {
     var isHorizontal : Bool { get set }
 }
 
+
+extension IBInspectableGradient where Self : UIView {
+    
+    /**
+     * applyGradient
+     * Applies the default setup for IBInspectableCorner protocol
+     */
+    func applyGradient() {
+        
+        // Removes previous effect
+        if  let gradient = self.gradientView {
+            gradient.removeFromSuperview()
+        }
+        var hasGradient = self as HasGradient
+        hasGradient.gradientView = UIView(frame: self.bounds)
+        
+        let sublayer = CAGradientLayer()
+        sublayer.frame = self.bounds
+        sublayer.colors = [
+            self.firstColor.cgColor,
+            self.secondColor.cgColor
+        ]
+        if  self.isHorizontal {
+            sublayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+            sublayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        }
+        
+        hasGradient.gradientView!.layer.addSublayer(sublayer)
+        self.addSubview(hasGradient.gradientView!)
+        self.sendSubview(toBack: hasGradient.gradientView!)
+    }
+}
