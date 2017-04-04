@@ -27,7 +27,7 @@ extension IBInspectableCorner where Self : UIView {
      * Applies the default setup for IBInspectableCorner protocol
      */
     func applyCorner() {
-        self.layer.cornerRadius = inspectable.cornerRadius
-        self.layer.masksToBounds = inspectable.cornerRadius > 0
+        self.layer.cornerRadius = self.cornerRadius
+        self.layer.masksToBounds = self.cornerRadius > 0
     }
 }
