@@ -25,7 +25,6 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  The UI components/properties you were missing in Interface Builder.
                    DESC
 
   s.homepage     = "https://github.com/felipericieri/CoolDesignables"
