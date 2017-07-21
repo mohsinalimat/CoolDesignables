@@ -1,8 +1,8 @@
 //
-//  IBDesignableBorder.swift
+//  IBDesignableBorderShadow.swift
 //  CoolDesignables
 //
-//  Created by Felipe Ricieri on 24/03/17.
+//  Created by Felipe Ricieri on 21/07/17.
 //  Copyright © 2017 Ricieri Labs. All rights reserved.
 //
 
@@ -18,7 +18,7 @@ import UIKit
  */
 @available(iOS 9.0, *)
 @IBDesignable
-open class UIViewBorder : UIView, IBInspectableBorder {
+open class UIViewBorderShadow : UIViewShadow, IBInspectableBorder {
     
     @IBInspectable
     open var borderWidth: CGFloat = 0 {
@@ -41,7 +41,7 @@ open class UIViewBorder : UIView, IBInspectableBorder {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-open class UIImageViewBorder : UIImageView, IBInspectableBorder {
+open class UIImageViewBorderShadow : UIImageViewShadow, IBInspectableBorder {
     
     @IBInspectable
     open var borderWidth: CGFloat = 0 {
@@ -58,13 +58,14 @@ open class UIImageViewBorder : UIImageView, IBInspectableBorder {
     }
 }
 
+
 /**
  * UIButtonBorder: An UIView with IBInspectable Border Width
  * @discussion: For more information about the properties, check the IBInspectableBorder protocol
  */
 @available(iOS 9.0, *)
 @IBDesignable
-open class UIButtonBorder : UIButton, IBInspectableBorder {
+open class UIButtonBorderShadow : UIButtonShadow, IBInspectableBorder {
     
     @IBInspectable
     open var borderWidth: CGFloat = 0 {
@@ -91,7 +92,7 @@ open class UIButtonBorder : UIButton, IBInspectableBorder {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-open class UIViewBorderHorizontal : UIView, IBInspectableBorderHorizontal {
+open class UIViewBorderHorizontalShadow : UIViewShadow, IBInspectableBorderHorizontal {
     
     @IBInspectable
     open var borderTop: CGFloat = 1.0 {
@@ -130,7 +131,7 @@ open class UIViewBorderHorizontal : UIView, IBInspectableBorderHorizontal {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-open class UIImageViewBorderHorizontal : UIImageView, IBInspectableBorderHorizontal {
+open class UIImageViewBorderHorizontalShadow : UIImageViewShadow, IBInspectableBorderHorizontal {
     
     @IBInspectable
     open var borderTop: CGFloat = 1.0 {
@@ -169,7 +170,7 @@ open class UIImageViewBorderHorizontal : UIImageView, IBInspectableBorderHorizon
  */
 @available(iOS 9.0, *)
 @IBDesignable
-open class UIButtonBorderHorizontal : UIButton, IBInspectableBorderHorizontal {
+open class UIButtonBorderHorizontalShadow : UIButtonShadow, IBInspectableBorderHorizontal {
     
     @IBInspectable
     open var borderTop: CGFloat = 1.0 {
@@ -212,7 +213,7 @@ open class UIButtonBorderHorizontal : UIButton, IBInspectableBorderHorizontal {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-open class UIViewBorderVertical : UIView, IBInspectableBorderVertical {
+open class UIViewBorderVerticalShadow : UIViewShadow, IBInspectableBorderVertical {
     
     @IBInspectable
     open var borderLeft: CGFloat = 1.0 {
@@ -251,7 +252,7 @@ open class UIViewBorderVertical : UIView, IBInspectableBorderVertical {
  */
 @available(iOS 9.0, *)
 @IBDesignable
-open class UIImageViewBorderVertical : UIImageView, IBInspectableBorderVertical {
+open class UIImageViewBorderVerticalShadow : UIImageViewShadow, IBInspectableBorderVertical {
     
     @IBInspectable
     open var borderLeft: CGFloat = 1.0 {
@@ -290,7 +291,7 @@ open class UIImageViewBorderVertical : UIImageView, IBInspectableBorderVertical 
  */
 @available(iOS 9.0, *)
 @IBDesignable
-open class UIButtonBorderVertical : UIButton, IBInspectableBorderVertical {
+open class UIButtonBorderVerticalShadow : UIButtonShadow, IBInspectableBorderVertical {
     
     @IBInspectable
     open var borderLeft: CGFloat = 1.0 {
@@ -322,4 +323,5 @@ open class UIButtonBorderVertical : UIButton, IBInspectableBorderVertical {
         drawRightBorder()
     }
 }
+
 
