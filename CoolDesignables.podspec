@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CoolDesignables"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "The UI components/properties you were missing in Interface Builder."
 
   # This description is used to generate tags and improve search results.
@@ -25,10 +25,11 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+  The UI components/properties you were missing in Interface Builder.
                    DESC
 
   s.homepage     = "https://github.com/felipericieri/CoolDesignables"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+  s.screenshots  = "http://felipe.ricieri.me/pods/cooldesignables/cdoverview.png"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
