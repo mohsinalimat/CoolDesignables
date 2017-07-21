@@ -26,10 +26,6 @@ And then run:
 
 To manually install `CoolDesignables`, simply add `CoolDesignables` files to your project.
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## License
 
 MIT License
