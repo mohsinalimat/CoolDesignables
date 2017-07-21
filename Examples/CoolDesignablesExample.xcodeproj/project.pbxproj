@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4AAFD7DA1F2225CE002F21CE /* IBDesignableBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFD7D51F2225CE002F21CE /* IBDesignableBlur.swift */; };
+		4AAFD7DB1F2225CE002F21CE /* IBDesignableBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFD7D61F2225CE002F21CE /* IBDesignableBorder.swift */; };
+		4AAFD7DC1F2225CE002F21CE /* IBDesignableCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFD7D71F2225CE002F21CE /* IBDesignableCorner.swift */; };
+		4AAFD7DD1F2225CE002F21CE /* IBDesignableGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFD7D81F2225CE002F21CE /* IBDesignableGradient.swift */; };
+		4AAFD7DE1F2225CE002F21CE /* IBDesignableShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFD7D91F2225CE002F21CE /* IBDesignableShadow.swift */; };
+		4AAFD7E51F2225DA002F21CE /* IBInspectableBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFD7E01F2225DA002F21CE /* IBInspectableBlur.swift */; };
+		4AAFD7E61F2225DA002F21CE /* IBInspectableBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFD7E11F2225DA002F21CE /* IBInspectableBorder.swift */; };
+		4AAFD7E71F2225DA002F21CE /* IBInspectableCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFD7E21F2225DA002F21CE /* IBInspectableCorner.swift */; };
+		4AAFD7E81F2225DA002F21CE /* IBInspectableGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFD7E31F2225DA002F21CE /* IBInspectableGradient.swift */; };
+		4AAFD7E91F2225DA002F21CE /* IBInspectableShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFD7E41F2225DA002F21CE /* IBInspectableShadow.swift */; };
 		4AC38B801E85CD6500AB7F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC38B7F1E85CD6500AB7F43 /* AppDelegate.swift */; };
 		4AC38B851E85CD6500AB7F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC38B831E85CD6500AB7F43 /* Main.storyboard */; };
 		4AC38B871E85CD6500AB7F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC38B861E85CD6500AB7F43 /* Assets.xcassets */; };
@@ -14,6 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4AAFD7D51F2225CE002F21CE /* IBDesignableBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableBlur.swift; sourceTree = "<group>"; };
+		4AAFD7D61F2225CE002F21CE /* IBDesignableBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableBorder.swift; sourceTree = "<group>"; };
+		4AAFD7D71F2225CE002F21CE /* IBDesignableCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableCorner.swift; sourceTree = "<group>"; };
+		4AAFD7D81F2225CE002F21CE /* IBDesignableGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableGradient.swift; sourceTree = "<group>"; };
+		4AAFD7D91F2225CE002F21CE /* IBDesignableShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableShadow.swift; sourceTree = "<group>"; };
+		4AAFD7E01F2225DA002F21CE /* IBInspectableBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspectableBlur.swift; sourceTree = "<group>"; };
+		4AAFD7E11F2225DA002F21CE /* IBInspectableBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspectableBorder.swift; sourceTree = "<group>"; };
+		4AAFD7E21F2225DA002F21CE /* IBInspectableCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspectableCorner.swift; sourceTree = "<group>"; };
+		4AAFD7E31F2225DA002F21CE /* IBInspectableGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspectableGradient.swift; sourceTree = "<group>"; };
+		4AAFD7E41F2225DA002F21CE /* IBInspectableShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspectableShadow.swift; sourceTree = "<group>"; };
 		4AC38B7C1E85CD6500AB7F43 /* CoolDesignablesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolDesignablesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC38B7F1E85CD6500AB7F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AC38B841E85CD6500AB7F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,6 +53,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AAFD7D41F2225CE002F21CE /* Designables */ = {
+			isa = PBXGroup;
+			children = (
+				4AAFD7D51F2225CE002F21CE /* IBDesignableBlur.swift */,
+				4AAFD7D61F2225CE002F21CE /* IBDesignableBorder.swift */,
+				4AAFD7D71F2225CE002F21CE /* IBDesignableCorner.swift */,
+				4AAFD7D81F2225CE002F21CE /* IBDesignableGradient.swift */,
+				4AAFD7D91F2225CE002F21CE /* IBDesignableShadow.swift */,
+			);
+			name = Designables;
+			path = ../../Pod/CoolDesignables/Designables;
+			sourceTree = "<group>";
+		};
+		4AAFD7DF1F2225DA002F21CE /* Inspectables */ = {
+			isa = PBXGroup;
+			children = (
+				4AAFD7E01F2225DA002F21CE /* IBInspectableBlur.swift */,
+				4AAFD7E11F2225DA002F21CE /* IBInspectableBorder.swift */,
+				4AAFD7E21F2225DA002F21CE /* IBInspectableCorner.swift */,
+				4AAFD7E31F2225DA002F21CE /* IBInspectableGradient.swift */,
+				4AAFD7E41F2225DA002F21CE /* IBInspectableShadow.swift */,
+			);
+			name = Inspectables;
+			path = ../../Pod/CoolDesignables/Inspectables;
+			sourceTree = "<group>";
+		};
+		4AAFD7EA1F2225E2002F21CE /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				4AAFD7DF1F2225DA002F21CE /* Inspectables */,
+				4AAFD7D41F2225CE002F21CE /* Designables */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		4AC38B731E85CD6400AB7F43 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +109,7 @@
 			children = (
 				4AC38B7F1E85CD6500AB7F43 /* AppDelegate.swift */,
 				4AC38B921E85CDA500AB7F43 /* Core */,
+				4AAFD7EA1F2225E2002F21CE /* Pod */,
 				4AC38B911E85CD9300AB7F43 /* Views */,
 			);
 			path = CoolDesignablesExample;
@@ -149,7 +205,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AAFD7DE1F2225CE002F21CE /* IBDesignableShadow.swift in Sources */,
+				4AAFD7DD1F2225CE002F21CE /* IBDesignableGradient.swift in Sources */,
+				4AAFD7E91F2225DA002F21CE /* IBInspectableShadow.swift in Sources */,
 				4AC38B801E85CD6500AB7F43 /* AppDelegate.swift in Sources */,
+				4AAFD7DC1F2225CE002F21CE /* IBDesignableCorner.swift in Sources */,
+				4AAFD7DB1F2225CE002F21CE /* IBDesignableBorder.swift in Sources */,
+				4AAFD7E81F2225DA002F21CE /* IBInspectableGradient.swift in Sources */,
+				4AAFD7DA1F2225CE002F21CE /* IBDesignableBlur.swift in Sources */,
+				4AAFD7E71F2225DA002F21CE /* IBInspectableCorner.swift in Sources */,
+				4AAFD7E51F2225DA002F21CE /* IBInspectableBlur.swift in Sources */,
+				4AAFD7E61F2225DA002F21CE /* IBInspectableBorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

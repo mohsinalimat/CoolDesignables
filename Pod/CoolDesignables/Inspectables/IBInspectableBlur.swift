@@ -47,6 +47,8 @@ extension IBInspectableBlur where Self : UIView {
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         blurEffectView.alpha = self.blurOpacity
         
+        self.accessibilityActivate()
+        
         // Applies
         self.blurBackgroundView = blurEffectView
         self.addSubview(self.blurBackgroundView!)
